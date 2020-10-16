@@ -13,7 +13,7 @@ resource "azurerm_sql_server" "server" {
     Description  = var.tag_description
   }
 }
-sresource "azurerm_sql_database" "db" {
+resource "azurerm_sql_database" "db" {
   count = length(var.db_name)
   name                = var.db_name
   resource_group_name = var.resource_group_name
