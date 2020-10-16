@@ -23,7 +23,7 @@ resource "azurerm_sql_database" "db" {
   extended_auditing_policy {
     storage_endpoint                        = var.primary_blob_endpoint
     storage_account_access_key              = var.primary_access_key
-    storage_account_access_key_is_secondary = true
+    storage_account_access_key_is_secondary = false
     retention_in_days                       = 6
   }
 
