@@ -15,7 +15,7 @@ resource "azurerm_sql_server" "server" {
 }
 sresource "azurerm_sql_database" "db" {
   count = length(var.db_name)
-  name                = var.db_name[count.index]
+  name                = var.db_name
   resource_group_name = var.resource_group_name
   location            = var.location
   server_name         = var.server_name

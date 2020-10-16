@@ -24,6 +24,6 @@ variable "admin_password" {
   description = "SQL Server Administrator Password"
 }
 variable "db_name" {
-  type        = list(string)
+  type        = string
   description = "Name of the SQL Server"
 }
