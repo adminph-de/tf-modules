@@ -17,8 +17,8 @@ sresource "azurerm_sql_database" "db" {
   count = length(var.db_name)
   name                = var.db_name[count.index]
   resource_group_name = var.resource_group_name
-  location            = var.region
-  server_name         = azurerm_sql_server.server.name
+  location            = var.location
+  server_name         = var.server_name
 
   extended_auditing_policy {
     storage_endpoint                        = var.primary_blob_endpoint
