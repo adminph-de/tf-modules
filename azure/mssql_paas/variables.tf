@@ -6,7 +6,7 @@ variable "resource_group_name" {
   type        = string
   description = "Resourcegroup Name where the SQL server gets deployed"
 }
-variable "region" {
+variable "location" {
   type        = string
   description = "Azuer region"
 }
